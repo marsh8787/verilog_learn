@@ -28,3 +28,12 @@ always @(*) begin
 end
     
 endmodule
+
+module minus(
+  input wire a,
+  output wire b
+);
+
+  assign b = a-1;
+
+endmodule
