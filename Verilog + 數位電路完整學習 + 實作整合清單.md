@@ -30,18 +30,21 @@
 - [x] 半加器 + 全加器
 - [x] 4-bit Ripple Carry Adder
 - [x] 2-to-1 / 4-to-1 MUX
-- [ ] 1-to-2 / 1-to-4 Demux
-- [ ] 3-to-8 Decoder
-- [ ] 8-to-3 Encoder
-- [ ] 2-bit / 4-bit Comparator
+- [x] 1-to-2 / 1-to-4 Demux
+- [x] 3-to-8 Decoder
+- [x] 8-to-3 Encoder
+- [x] 2-bit / 4-bit Comparator
+- [x] Priority Comparator
 
 ### 時序邏輯
-- [ ] D Flip-Flop
-- [ ] SR / JK Flip-Flop
-- [ ] 同步 / 非同步 Reset
-- [ ] 4-bit Up / Down Counter
-- [ ] Shift Register (左移 / 右移)
-- [ ] Ring Counter / Johnson Counter
+- [x] D Flip-Flop
+- [x] SR / JK Flip-Flop
+- [x] 同步 / 非同步 Reset
+- [x] 4-bit Up / Down Enable Mod-10 Loadable Counter
+- [x] Right Shift Register(補0)
+- [x] Ring counter(one hot)
+- [x] Johnson Counter
+- [x] Serial-in Counter
 
 **Mini Project / 練習建議**
 - [ ] LED 流水燈 (shift register + counter)
@@ -136,29 +139,29 @@
 
 | 週 | 模組 / 專案 | 建議天數 | 勾選 |
 |---|-------------|----------|------|
-| 1 | 二進制/十進制/十六進制轉換 | 1 | [ ] |
-| 1 | 有號數 / 無號數計算 | 1 | [ ] |
-| 1 | 2’s complement 加減法 | 1 | [ ] |
-| 1 | AND/OR/XOR/NOT 手算 | 1 | [ ] |
-| 2 | 真值表設計 (2~4 inputs) | 1 | [ ] |
-| 2 | 布林代數簡化 (K-map) | 1 | [ ] |
-| 2 | 德摩根定律驗證 | 1 | [ ] |
-| 3 | 半加器 + 全加器 | 2 | [ ] |
-| 3 | 4-bit Ripple Carry Adder | 2 | [ ] |
-| 3 | 2-to-1 / 4-to-1 MUX | 1 | [ ] |
-| 4 | 1-to-2 / 1-to-4 Demux | 1 | [ ] |
-| 4 | 3-to-8 Decoder | 1 | [ ] |
-| 4 | 8-to-3 Encoder | 1 | [ ] |
-| 4 | 2-bit / 4-bit Comparator | 1 | [ ] |
+| 1 | 二進制/十進制/十六進制轉換 | 1 | [x] |
+| 1 | 有號數 / 無號數計算 | 1 | [x] |
+| 1 | 2’s complement 加減法 | 1 | [x] |
+| 1 | AND/OR/XOR/NOT 手算 | 1 | [x] |
+| 2 | 真值表設計 (2~4 inputs) | 1 | [x] |
+| 2 | 布林代數簡化 (K-map) | 1 | [x] |
+| 2 | 德摩根定律驗證 | 1 | [x] |
+| 3 | 半加器 + 全加器 | 2 | [x] |
+| 3 | 4-bit Ripple Carry Adder | 2 | [x] |
+| 3 | 2-to-1 / 4-to-1 MUX | 1 | [x] |
+| 4 | 1-to-2 / 1-to-4 Demux | 1 | [x] |
+| 4 | 3-to-8 Decoder | 1 | [x] |
+| 4 | 8-to-3 Encoder | 1 | [x] |
+| 4 | 2-bit / 4-bit Comparator | 1 | [x] |
 | 5 | D / SR / JK Flip-Flop | 2 | [ ] |
-| 5 | 同步 / 非同步 Reset Counter | 2 | [ ] |
-| 5 | Shift Register 左/右移 | 2 | [ ] |
-| 6 | Ring / Johnson Counter | 1 | [ ] |
+| 5 | 同步 / 非同步 Reset Counter | 2 | [x] |
+| 5 | Shift Register 左/右移 | 2 | [x] |
+| 6 | Ring / Johnson Counter | 1 | [x] |
 | 6 | LED 流水燈 | 1 | [ ] |
-| 6 | module / input/output / wire/reg 練習 | 1 | [ ] |
+| 6 | module / input/output / wire/reg 練習 | 1 | [x] |
 | 7 | assign & always @(*) 組合邏輯 | 1 | [ ] |
-| 7 | always @(posedge clk) 時序邏輯 | 1 | [ ] |
-| 7 | blocking vs non-blocking | 1 | [ ] |
+| 7 | always @(posedge clk) 時序邏輯 | 1 | [x] |
+| 7 | blocking vs non-blocking | 1 | [x] |
 | 7 | case / if-else / nested if | 1 | [ ] |
 | 8 | parameter 可調整模組 | 1 | [ ] |
 | 8 | N-bit Adder 模組 | 2 | [ ] |
