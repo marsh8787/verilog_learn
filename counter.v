@@ -77,3 +77,33 @@ module _4bits_updown_mod10_counter(
     end
 
 endmodule
+
+module _4bitsEnableUpCounter(
+  input	wiare clk,
+  input wire en,
+  input wire reset,
+  input wire load,
+  input wire dir,
+  input wire [3:0] data,
+  output reg [3:0] Q
+);
+  always @(posedge clk)begin
+    if(reset)
+      Q <= 0;
+    else if(load)
+      Q <= data;
+    else if(en)
+      if(dir)
+        if(Q >= 4'b1001)
+          Q <= 0;
+    	else
+          Q <= Q+1;
+      else
+        if(Q == 4'b0000)
+          Q <= 9;
+        else
+          Q <= Q-1;
+    else
+      Q <= Q;
+  end
+endmodule
