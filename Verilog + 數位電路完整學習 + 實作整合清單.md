@@ -56,20 +56,28 @@
 ## 🟢 Level 2：Verilog RTL 入門
 
 ### 語法基礎
-- [ ] module, input/output, wire/reg
-- [ ] assign / always @(*) / always @(posedge clk)
-- [ ] blocking (=) vs non-blocking (<=)
-- [ ] case / if-else / nested if
+- [x] module, input/output, wire/reg
+- [x] assign / always @(*) / always @(posedge clk)
+- [x] blocking (=) vs non-blocking (<=)
+- [x] case / if-else / nested if
 - [ ] parameter / 可調整模組大小
 - [ ] 多模組連接練習
 
 
 ### RTL 概念
-- [ ] 組合邏輯寫法
-- [ ] 時序邏輯寫法
-- [ ] latch 產生原因與修正
-- [ ] 同步 reset counter
+- [x] 組合邏輯寫法
+- [x] 時序邏輯寫法
+- [x] latch 產生原因與修正
+- [x] 同步 reset counter
 - [ ] 4-bit ALU (AND, OR, ADD, SUB)
+
+# RTL 理論補充（已完成）
+- [x] always @(*) 電路本質理解
+- [x] latch 推導條件（未完整指定）
+- [x] default assignment pattern
+- [x] nested if latch 風險辨識
+- [x] priority vs parallel 結構差異
+- [x] @(*) vs @(posedge clk) 硬體語意差異
 
 **Mini Project / 練習建議**
 - [ ] 4-bit Calculator 模組
