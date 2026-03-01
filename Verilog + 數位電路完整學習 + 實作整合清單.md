@@ -162,7 +162,7 @@
 | 4 | 3-to-8 Decoder | 1 | [x] |
 | 4 | 8-to-3 Encoder | 1 | [x] |
 | 4 | 2-bit / 4-bit Comparator | 1 | [x] |
-| 5 | D / SR / JK Flip-Flop | 2 | [ ] |
+| 5 | D / SR / JK Flip-Flop | 2 | [x] |
 | 5 | 同步 / 非同步 Reset Counter | 2 | [x] |
 | 5 | Shift Register 左/右移 | 2 | [x] |
 | 6 | Ring / Johnson Counter | 1 | [x] |
@@ -174,7 +174,7 @@
 | 7 | case / if-else / nested if | 1 | [x] |
 | 8 | parameter 可調整模組 | 1 | [x] |
 | 8 | N-bit Adder 模組 | 2 | [x] |
-| 8 | 可重用 MUX 模組 | 1 | [ ] |
+| 8 | 可重用 MUX 模組 | 1 | [x] |
 | 8 | Latch 錯誤示範 & 修正 | 1 | [x] |
 | 9 | 可同步 reset Counter | 1 | [x] |
 | 9 | 4-bit ALU | 2 | [x] |
