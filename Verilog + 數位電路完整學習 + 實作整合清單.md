@@ -60,8 +60,8 @@
 - [x] assign / always @(*) / always @(posedge clk)
 - [x] blocking (=) vs non-blocking (<=)
 - [x] case / if-else / nested if
-- [ ] parameter / 可調整模組大小
-- [ ] 多模組連接練習
+- [x] parameter / 可調整模組大小
+- [x] 多模組連接練習
 
 
 ### RTL 概念
@@ -69,7 +69,8 @@
 - [x] 時序邏輯寫法
 - [x] latch 產生原因與修正
 - [x] 同步 reset counter
-- [ ] 4-bit ALU (AND, OR, ADD, SUB)
+- [x] 4-bit ALU (AND, OR, ADD, SUB + C/Z/N/V flags)
+- [x] Parameterized ALU + Flag 設計
 
 # RTL 理論補充（已完成）
 - [x] always @(*) 電路本質理解
@@ -167,16 +168,16 @@
 | 6 | Ring / Johnson Counter | 1 | [x] |
 | 6 | LED 流水燈 | 1 | [ ] |
 | 6 | module / input/output / wire/reg 練習 | 1 | [x] |
-| 7 | assign & always @(*) 組合邏輯 | 1 | [ ] |
+| 7 | assign & always @(*) 組合邏輯 | 1 | [x] |
 | 7 | always @(posedge clk) 時序邏輯 | 1 | [x] |
 | 7 | blocking vs non-blocking | 1 | [x] |
-| 7 | case / if-else / nested if | 1 | [ ] |
-| 8 | parameter 可調整模組 | 1 | [ ] |
-| 8 | N-bit Adder 模組 | 2 | [ ] |
+| 7 | case / if-else / nested if | 1 | [x] |
+| 8 | parameter 可調整模組 | 1 | [x] |
+| 8 | N-bit Adder 模組 | 2 | [x] |
 | 8 | 可重用 MUX 模組 | 1 | [ ] |
-| 8 | Latch 錯誤示範 & 修正 | 1 | [ ] |
-| 9 | 可同步 reset Counter | 1 | [ ] |
-| 9 | 4-bit ALU | 2 | [ ] |
+| 8 | Latch 錯誤示範 & 修正 | 1 | [x] |
+| 9 | 可同步 reset Counter | 1 | [x] |
+| 9 | 4-bit ALU | 2 | [x] |
 | 9 | 4-bit Calculator 模組 | 2 | [ ] |
 | 10 | Traffic Light Controller (FSM) | 2 | [ ] |
 | 10 | Shift Register 可調整長度 | 1 | [ ] |
