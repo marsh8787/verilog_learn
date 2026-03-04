@@ -79,7 +79,7 @@ module _4bits_updown_mod10_counter(
 endmodule
 
 module _4bitsEnableUpCounter(
-  input	wiare clk,
+  input	wire clk,
   input wire en,
   input wire reset,
   input wire load,
