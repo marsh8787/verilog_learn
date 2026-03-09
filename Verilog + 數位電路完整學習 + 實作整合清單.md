@@ -90,14 +90,14 @@
 ## 🟢 Level 3：RTL 設計能力
 
 ### FSM 設計
-- [ ] Moore / Mealy FSM
-- [ ] 2~4 state FSM
-- [ ] One-hot / Binary encoding
+- [x] Moore / Mealy FSM
+- [x] 2~4 state FSM
+- [x] One-hot / Binary encoding
 - [ ] LED Pattern / 音調 / Keypad Controller
 
 ### 資料路徑設計
 - [ ] 8-bit Register File (4~8 reg)
-- [ ] ALU 支援 ADD/SUB/AND/OR/XOR
+- [x] ALU 支援 ADD/SUB/AND/OR/XOR
 - [ ] Pipeline Register (1~2 stage)
 - [ ] Simple Memory Interface
 
@@ -108,10 +108,28 @@
 - [ ] IO constraint 練習 (LED/Button/VGA)
 - [ ] Timing violation 模擬
 
+### 外部訊號處理（FPGA Input Handling）
+
+- [x] 2FF Synchronizer（metastability 降低）
+- [x] Edge Detect（one pulse）
+- [x] Button Debounce（counter based）
+
+### CPU Architecture 基礎
+
+- [x] Datapath + Control 分離
+- [x] Register Transfer 思維
+- [x] Minimal CPU datapath (PC/IR/RegFile/ALU/MUX)
+- [x] Instruction format 設計
+- [x] opcode / immediate / decode 概念
+- [ ] Register File RTL
+- [ ] Program Counter RTL
+- [ ] Immediate generator
+- [ ] Control FSM (FETCH/EXECUTE)
+- [ ] CPU top module
+
 **Mini Project / 練習建議**
 - [ ] UART TX/RX 模組
 - [ ] VGA Controller 顯示簡單圖形
-- [ ] 8-bit CPU Datapath (ALU + RegFile + PC)
 
 ---
 
@@ -181,9 +199,9 @@
 | 9 | 4-bit Calculator 模組 | 2 | [ ] |
 | 10 | Traffic Light Controller (FSM) | 2 | [ ] |
 | 10 | Shift Register 可調整長度 | 1 | [ ] |
-| 10 | Moore / Mealy FSM 寫法 | 2 | [ ] |
-| 11 | 2~4 state FSM 練習 | 1 | [ ] |
-| 11 | One-hot / Binary encoding | 1 | [ ] |
+| 10 | Moore / Mealy FSM 寫法 | 2 | [x] |
+| 11 | 2~4 state FSM 練習 | 1 | [x] |
+| 11 | One-hot / Binary encoding | 1 | [x] |
 | 11 | LED Pattern / 音調 / Keypad Controller | 2 | [ ] |
 | 11 | 8-bit Register File | 2 | [ ] |
 | 12 | ALU 支援 ADD/SUB/AND/OR/XOR | 2 | [ ] |

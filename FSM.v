@@ -101,10 +101,15 @@ module fsm4_door_alarm_s(
     reg coin_ff1,coin_ff2;
     reg push_ff1,push_ff2;
     reg timeout_ff1,timeout_ff2;
-
-    assign wire coin_s = coin_ff2;
-    assign wire push_s = push_ff2;
-    assign wire timeout_s = timeout_ff2;
+    wire coin_s;
+    wire push_s;
+    wire timeout_s;
+    reg push_prev;
+    reg push_pulse;
+    
+    assign coin_s = coin_ff2;
+    assign push_s = push_ff2;
+    assign timeout_s = timeout_ff2;
 
     always @(posedge clk)begin
         if(reset)begin
@@ -114,6 +119,7 @@ module fsm4_door_alarm_s(
             push_ff2 <= 0;
             timeout_ff1 <= 0;
             timeout_ff2 <= 0;
+            push_prev <= 0;
         end
         else begin
             coin_ff1 <= coin;
@@ -122,6 +128,7 @@ module fsm4_door_alarm_s(
             push_ff2 <= push_ff1;
             timeout_ff1 <= timeout;
             timeout_ff2 <= timeout_ff1; 
+            push_prev <= push_s;
         end
     end
 
@@ -137,13 +144,14 @@ module fsm4_door_alarm_s(
     always @(*)begin
         next_state = state;
         unlock = 0;
+        push_pulse = push_s & ~push_prev;
         case(state)
             LOCKED : 
                 if(coin_s)begin
                     next_state = PAID;
                 end
             PAID :
-                if(push_s)begin
+                if(push_pulse)begin
                     next_state = OPEN;
                 end
                 else if(timeout_s) begin
