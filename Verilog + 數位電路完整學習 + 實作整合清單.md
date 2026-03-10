@@ -30,15 +30,15 @@
 - [x] 半加器 + 全加器
 - [x] 4-bit Ripple Carry Adder
 - [x] 2-to-1 / 4-to-1 MUX
-- [ ] 1-to-2 / 1-to-4 Demux
-- [ ] 3-to-8 Decoder
-- [ ] 8-to-3 Encoder
-- [ ] 2-bit / 4-bit Comparator
+- [x] 1-to-2 / 1-to-4 Demux
+- [x] 3-to-8 Decoder
+- [x] 8-to-3 Encoder
+- [x] 2-bit / 4-bit Comparator
 
 ### 時序邏輯
-- [ ] D Flip-Flop
+- [x] D Flip-Flop
 - [ ] SR / JK Flip-Flop
-- [ ] 同步 / 非同步 Reset
+- [x] 同步 / 非同步 Reset
 - [ ] 4-bit Up / Down Counter
 - [ ] Shift Register (左移 / 右移)
 - [ ] Ring Counter / Johnson Counter
@@ -53,12 +53,12 @@
 ## 🟢 Level 2：Verilog RTL 入門
 
 ### 語法基礎
-- [ ] module, input/output, wire/reg
+- [x] module, input/output, wire/reg
 - [ ] assign / always @(*) / always @(posedge clk)
-- [ ] blocking (=) vs non-blocking (<=)
+- [x] blocking (=) vs non-blocking (<=)
 - [ ] case / if-else / nested if
 - [ ] parameter / 可調整模組大小
-- [ ] 多模組連接練習
+- [x] 多模組連接練習
 
 
 ### RTL 概念
