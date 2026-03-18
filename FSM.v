@@ -95,16 +95,30 @@ module fsm4_door_alarm_s(
     input wire timeout,
     output reg unlock
 );
+
     localparam LOCKED = 4'b0001,PAID = 4'b0010,OPEN = 4'b0100,ALARM = 4'b1000;
 
     reg [3:0] state,next_state; 
+    //2ff
     reg coin_ff1,coin_ff2;
     reg push_ff1,push_ff2;
     reg timeout_ff1,timeout_ff2;
+    wire coin_s;
+    wire push_s;
+    wire timeout_s;    
+    assign coin_s = coin_ff2;
+    assign push_s = push_ff2;
+    assign timeout_s = timeout_ff2;
+    //debounce
+    reg push_clean;
+    reg [18:0] debounce_ctn;
+    parameter DE_CNT_MAX = 500000;
+    //edge detect
+    reg push_prev;
+    wire push_pulse;
+    assign push_pulse = push_clean & ~push_prev;
 
-    assign wire coin_s = coin_ff2;
-    assign wire push_s = push_ff2;
-    assign wire timeout_s = timeout_ff2;
+
 
     always @(posedge clk)begin
         if(reset)begin
@@ -127,6 +141,34 @@ module fsm4_door_alarm_s(
 
     always @(posedge clk)begin
         if(reset)begin
+            push_clean <=0;
+            debounce_ctn <= 0;
+        end
+        else begin
+            if(push_s == push_clean)begin
+                debounce_ctn <= 0;
+            end
+            else if(debounce_ctn == DE_CNT_MAX-1)begin
+                push_clean <= push_ff2;
+                debounce_ctn <= 0;
+            end
+            else begin
+                debounce_ctn <= debounce_ctn + 1;
+            end
+        end
+    end
+
+    always @(posedge clk)begin
+        if(reset)begin
+            push_prev <= 0;
+        end
+        else begin
+            push_prev <= push_clean;
+        end
+    end
+
+    always @(posedge clk)begin
+        if(reset)begin
             state <= LOCKED;
         end
         else begin
@@ -143,7 +185,7 @@ module fsm4_door_alarm_s(
                     next_state = PAID;
                 end
             PAID :
-                if(push_s)begin
+                if(push_pulse)begin
                     next_state = OPEN;
                 end
                 else if(timeout_s) begin
@@ -162,5 +204,4 @@ module fsm4_door_alarm_s(
         endcase
     end
 endmodule
-
 
