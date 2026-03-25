@@ -4,3 +4,35 @@ a en out
 0  1  0
 1  1  1 
 
+0 0 1 0 0 0 0 0 0 0
+
+{LED[8:0],LED[9]}
+
+00_00_01_02
+
+opcode addr1 addr2 wr_addr
+00 
+mtbf
+
+mean time between failure
+
+
+
+
+program counter 1 2 3 4
+
+- adddr input
+instruction memory 
+- output 
+
+-> 
+
+instruction register
+
+decode(op code, addr)
+
+register file 
+
+alu (+ - > < or and)
+
+writeback(register)

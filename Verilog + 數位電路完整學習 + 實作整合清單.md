@@ -97,7 +97,7 @@
 
 ### 資料路徑設計
 - [ ] 8-bit Register File (4~8 reg)
-- [ ] ALU 支援 ADD/SUB/AND/OR/XOR
+- [x] ALU 支援 ADD/SUB/AND/OR/XOR
 - [ ] Pipeline Register (1~2 stage)
 - [ ] Simple Memory Interface
 
@@ -114,10 +114,22 @@
 - [x] Edge Detect（one pulse）
 - [x] Button Debounce（counter based）
 
+### CPU Architecture 基礎
+
+- [x] Datapath + Control 分離
+- [x] Register Transfer 思維
+- [x] Minimal CPU datapath (PC/IR/RegFile/ALU/MUX)
+- [x] Instruction format 設計
+- [x] opcode / immediate / decode 概念
+- [ ] Register File RTL
+- [ ] Program Counter RTL
+- [ ] Immediate generator
+- [ ] Control FSM (FETCH/EXECUTE)
+- [ ] CPU top module
+
 **Mini Project / 練習建議**
 - [ ] UART TX/RX 模組
 - [ ] VGA Controller 顯示簡單圖形
-- [ ] 8-bit CPU Datapath (ALU + RegFile + PC)
 
 ---
 

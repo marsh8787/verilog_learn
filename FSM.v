@@ -128,6 +128,7 @@ module fsm4_door_alarm_s(
             push_ff2 <= 0;
             timeout_ff1 <= 0;
             timeout_ff2 <= 0;
+            push_prev <= 0;
         end
         else begin
             coin_ff1 <= coin;
@@ -179,12 +180,14 @@ module fsm4_door_alarm_s(
     always @(*)begin
         next_state = state;
         unlock = 0;
+        push_pulse = push_s & ~push_prev;
         case(state)
             LOCKED : 
                 if(coin_s)begin
                     next_state = PAID;
                 end
             PAID :
+                if(push_pulse)begin
                 if(push_pulse)begin
                     next_state = OPEN;
                 end
