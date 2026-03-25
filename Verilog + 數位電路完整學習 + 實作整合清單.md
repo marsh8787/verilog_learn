@@ -96,7 +96,7 @@
 - [ ] LED Pattern / 音調 / Keypad Controller
 
 ### 資料路徑設計
-- [ ] 8-bit Register File (4~8 reg)
+- [x] 8-bit Register File (4~8 reg)
 - [x] ALU 支援 ADD/SUB/AND/OR/XOR
 - [ ] Pipeline Register (1~2 stage)
 - [ ] Simple Memory Interface
@@ -121,9 +121,9 @@
 - [x] Minimal CPU datapath (PC/IR/RegFile/ALU/MUX)
 - [x] Instruction format 設計
 - [x] opcode / immediate / decode 概念
-- [ ] Register File RTL
-- [ ] Program Counter RTL
-- [ ] Immediate generator
+- [x] Register File RTL
+- [x] Program Counter RTL
+- [x] Immediate generator
 - [ ] Control FSM (FETCH/EXECUTE)
 - [ ] CPU top module
 
@@ -214,8 +214,8 @@
 | 12 | Timing Violation 模擬 | 1 | [ ] |
 | 12 | UART TX/RX 模組 | 3 | [ ] |
 | 12 | VGA Controller | 3 | [ ] |
-| 12 | 8-bit CPU Datapath | 4 | [ ] |
-
+| 12 | Execute datapath integration | 4 | [x] |
+| 12 | Full CPU datapath integration | 4 | [ ] |
 ---
 
 ## 🔹 使用建議
