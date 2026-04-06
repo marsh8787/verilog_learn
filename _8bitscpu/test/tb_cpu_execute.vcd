@@ -1,0 +1,225 @@
+$date
+	Sun Mar 15 00:48:23 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_cpu_execute $end
+$var wire 8 ! t_reg7 [7:0] $end
+$var wire 8 " t_reg6 [7:0] $end
+$var wire 8 # t_reg5 [7:0] $end
+$var wire 8 $ t_reg4 [7:0] $end
+$var wire 8 % t_reg3 [7:0] $end
+$var wire 8 & t_reg2 [7:0] $end
+$var wire 8 ' t_reg1 [7:0] $end
+$var wire 8 ( t_reg0 [7:0] $end
+$var reg 1 ) clk $end
+$var reg 11 * instruction [10:0] $end
+$var reg 1 + reset $end
+$scope module uut $end
+$var wire 1 ) clk $end
+$var wire 11 , instruction [10:0] $end
+$var wire 1 + reset $end
+$var wire 1 - write_enable $end
+$var wire 8 . writeback_data [7:0] $end
+$var wire 3 / write_addr [2:0] $end
+$var wire 8 0 t_reg7 [7:0] $end
+$var wire 8 1 t_reg6 [7:0] $end
+$var wire 8 2 t_reg5 [7:0] $end
+$var wire 8 3 t_reg4 [7:0] $end
+$var wire 8 4 t_reg3 [7:0] $end
+$var wire 8 5 t_reg2 [7:0] $end
+$var wire 8 6 t_reg1 [7:0] $end
+$var wire 8 7 t_reg0 [7:0] $end
+$var wire 3 8 rs2 [2:0] $end
+$var wire 3 9 rs1 [2:0] $end
+$var wire 8 : reg_data2 [7:0] $end
+$var wire 8 ; reg_data1 [7:0] $end
+$var wire 2 < opcode [1:0] $end
+$scope module alu1 $end
+$var wire 2 = alu_op [1:0] $end
+$var wire 8 > B [7:0] $end
+$var wire 8 ? A [7:0] $end
+$var reg 8 @ Y [7:0] $end
+$upscope $end
+$scope module inde $end
+$var wire 11 A instruction [10:0] $end
+$var wire 3 B write_addr [2:0] $end
+$var wire 3 C rs2 [2:0] $end
+$var wire 3 D rs1 [2:0] $end
+$var wire 2 E opcode [1:0] $end
+$upscope $end
+$scope module rsgfile $end
+$var wire 1 ) clk $end
+$var wire 1 + reset $end
+$var wire 3 F rs1 [2:0] $end
+$var wire 3 G rs2 [2:0] $end
+$var wire 8 H t_reg0 [7:0] $end
+$var wire 8 I t_reg1 [7:0] $end
+$var wire 8 J t_reg2 [7:0] $end
+$var wire 8 K t_reg3 [7:0] $end
+$var wire 8 L t_reg4 [7:0] $end
+$var wire 8 M t_reg5 [7:0] $end
+$var wire 8 N t_reg6 [7:0] $end
+$var wire 8 O t_reg7 [7:0] $end
+$var wire 3 P write_addr [2:0] $end
+$var wire 8 Q write_data [7:0] $end
+$var wire 1 - write_enable $end
+$var wire 8 R reg_data2 [7:0] $end
+$var wire 8 S reg_data1 [7:0] $end
+$var integer 32 T i [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx T
+bx S
+bx R
+bx Q
+bx P
+b111 O
+b110 N
+b101 M
+b100 L
+b11 K
+b10 J
+b1 I
+b0 H
+bx G
+bx F
+bx E
+bx D
+bx C
+bx B
+bx A
+bx @
+bx ?
+bx >
+bx =
+bx <
+bx ;
+bx :
+bx 9
+bx 8
+b0 7
+b1 6
+b10 5
+b11 4
+b100 3
+b101 2
+b110 1
+b111 0
+bx /
+bx .
+1-
+bx ,
+x+
+bx *
+0)
+b0 (
+b1 '
+b10 &
+b11 %
+b100 $
+b101 #
+b110 "
+b111 !
+$end
+#5
+1)
+#10
+0)
+0+
+#15
+1)
+#20
+b11 .
+b11 @
+b11 Q
+b1 ;
+b1 ?
+b1 S
+b10 :
+b10 >
+b10 R
+b0 <
+b0 =
+b0 E
+b1 9
+b1 D
+b1 F
+b10 8
+b10 C
+b10 G
+b100 /
+b100 B
+b100 P
+0)
+b1010100 *
+b1010100 ,
+b1010100 A
+#25
+b11 $
+b11 3
+b11 L
+1)
+#30
+b1 .
+b1 @
+b1 Q
+b11 ;
+b11 ?
+b11 S
+b1 <
+b1 =
+b1 E
+b11 9
+b11 D
+b11 F
+b1 /
+b1 B
+b1 P
+0)
+b1011010001 *
+b1011010001 ,
+b1011010001 A
+#35
+1)
+#40
+b1101 .
+b1101 @
+b1101 Q
+b111 ;
+b111 ?
+b111 S
+b110 :
+b110 >
+b110 R
+b0 <
+b0 =
+b0 E
+b111 9
+b111 D
+b111 F
+b110 8
+b110 C
+b110 G
+b0 /
+b0 B
+b0 P
+0)
+b111110000 *
+b111110000 ,
+b111110000 A
+#45
+1)
+#50
+0)
