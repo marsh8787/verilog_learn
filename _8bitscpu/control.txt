@@ -1,0 +1,28 @@
+ADD:
+alu_src = reg2
+reg_write = 1
+alu_op = ADD
+branch_en = 0
+pc_next = pc+1
+
+ADDI:
+alu_src = imm
+reg_write = 1
+alu_op = ADD
+branch_en = 0
+pc_next = pc+1
+
+BEQZ:
+alu_src = 不重要 / 可先固定 imm 或 reg2，但實際上不是重點
+reg_write = 0
+alu_op = 不重要，或定成專門給 compare/zero 用
+branch_en = 1
+pc_next = zero ? branch : pc+1
+
+
+| opcode | 指令   | reg_write | alu_src | branch_en | alu_add |
+| ------ | ---- | --------- | ------- | --------- | ------- |
+| 00     | ADD  | 1         | 0       | 0         | 1       |
+| 01     | ADDI | 1         | 1       | 0         | 1       |
+| 10     | BEQZ | 0         | X       | 1         | X       |
+| 11     | NOP  | 0         | X       | 0         | X       |

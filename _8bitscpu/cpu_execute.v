@@ -48,7 +48,7 @@ module alu(
 );
 
     /*  
-    -alu_op = 00 → ADD
+    -lu_op = 00 → ADD
     alu_op = 01 → SUB
     alu_op = 10 → AND
     alu_op = 11 → OR
