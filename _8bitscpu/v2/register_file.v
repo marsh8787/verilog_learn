@@ -26,6 +26,6 @@ module register_file(
     end 
 
     assign reg1_data = (reg1_addr == 0)? 8'b0 : regs[reg1_addr];
-    assign reg1_data = (reg1_addr == 0)? 8'b0 : regs[reg1_addr];
+    assign reg2_data = (reg2_addr == 0)? 8'b0 : regs[reg2_addr];
     
 endmodule

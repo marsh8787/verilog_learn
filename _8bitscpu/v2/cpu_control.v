@@ -5,7 +5,8 @@ module cpu_control(
     output reg ir_write,
     output reg pc_write,
     output reg reg_write,
-    output reg alu_src,
+    output reg alu_src_sel,
+    output reg wb_data_sel,
     output reg branch_en
 );
 
@@ -35,24 +36,27 @@ module cpu_control(
         ir_write = 0;
         pc_write = 0;
         reg_write = 0;
-        alu_src = 0;
+        alu_src_sel = 0;
         branch_en = 0;
+        wb_data_sel = 0;
         case(state)
             FETCH:
             begin
                 ir_write = 1;
                 pc_write = 0;
                 reg_write = 0;
-                alu_src = 0;
+                alu_src_sel = 0;
                 branch_en = 0;
+                wb_data_sel = 0;
             end
             EXECUTE:
             begin
                 ir_write = 0;
                 pc_write = 1;
-                reg_write = ((opcode == 2'b10) || (opcode == 2'b11)) ? 0 : 1;
-                alu_src = (opcode == 2'b01)? 1:0;
-                branch_en = (opcode == 2'b10)? 1:0;
+                reg_write = (opcode == 2'b10) ? 0 : 1;
+                alu_src_sel = (opcode == 2'b01) ? 1 : 0;
+                branch_en = (opcode == 2'b10) ? 1 : 0;
+                wb_data_sel = (opcode == 2'b11) ? 1 : 0;
             end
         endcase
     end
