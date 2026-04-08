@@ -28,18 +28,20 @@ module tb_cpu;
         .t_reg4(t_reg4),
         .t_reg5(t_reg5),
         .t_reg6(t_reg6),
-        .t_reg7(t_reg7),
+        .t_reg7(t_reg7)
     );
 
     always #5 clk = ~clk;
 
     initial begin
-        $dumpfile("tb_cou.vcd");
-        $dumpfile(0,tb_cpu);
+        $dumpfile("tb_cpu.vcd");
+        $dumpvars(0,tb_cpu);
 
         clk = 0;
         #10
         reset = 1;
+        #10
+        reset = 0;
         #10000
 
         $finish;
