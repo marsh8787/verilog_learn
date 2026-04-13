@@ -35,7 +35,7 @@ module tb_cpu;
 
     initial begin
         $dumpfile("tb_cou.vcd");
-        $dumpfile(0,tb_cpu);
+        $dumpvars(0,tb_cpu);
 
         clk = 0;
         #10
