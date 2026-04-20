@@ -1,11 +1,11 @@
 module half_adder (
-    a,b,sum,cout
+    a,b,sum,carry
 );
     input wire a,b;
-    output wire sum,cout;
+    output wire sum,carry;
 
     assign sum = a^b;
-    assign cout = a&b;
+    assign carry = a&b;
 endmodule
 
 module full_adder (
