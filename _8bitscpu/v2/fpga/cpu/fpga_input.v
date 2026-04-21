@@ -18,10 +18,10 @@ module fpga_input(
 
     reg func_sync0,func_sync1;
 
-    assign cpu_en_btn_p = ~cpu_level0 & cpu_level1;
     assign regssel_reset_p = reset_level0 & reset_level1;
     assign func_sel_s = func_sync1;
 
+    assign cpu_en_btn_p = ~cpu_level0 & cpu_level1;
     always @(posedge clk) begin
         cpu_sync0 <= cpu_en_btn;
         cpu_sync1 <= cpu_sync0;
